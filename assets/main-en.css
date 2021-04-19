@@ -1,0 +1,14 @@
+body {
+  direction: ltr;
+  text-align: left;
+}
+
+.articles-title::after {
+  left: 0;
+}
+
+.owl-nav {
+  left: auto;
+  right: 0;
+
+}
