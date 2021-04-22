@@ -10,5 +10,93 @@ body {
 .owl-nav {
   left: auto;
   right: 0;
+}
 
+.donate .donate-person {
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
+}
+
+.donate-person .blood-type {
+  width: 110px;
+  height: 110px;
+}
+
+@media (max-width: 767px) {
+  .donate-person .blood-type {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 19px;
+  }
+
+  .donate .donate-person {
+    border-radius: 10px;
+  }
+}
+
+
+/* conatct us */
+.contact-us {
+  background-image: url(../assets/imgs/call-ltr.jpg);
+  width: 100%;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: right;
+}
+
+.contact-us .contact-content {
+  position: absolute;
+  top: 10%;
+  right: auto;
+  left: 0%;
+  text-align: center;
+}
+
+
+.contact-us .contact-content h2 {
+  color: var(--blood);
+  position: relative;
+}
+
+.contact-us .contact-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 115px;
+  height: 2px;
+  background-color: var(--blood);
+}
+
+.contact-us .contact-desc {
+  color: var(--secColor);
+  font-size: 18px;
+  font-weight: bold;
+  width: 60%;
+  margin: auto;
+}
+
+.contact-us .contact-content .whats span {
+  background-color: #3ab54a;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  right: auto;
+  left: 42px;
+  padding: 18px 0px;
+  width: 240px;
+  font-size: 18px;
+  border-top-left-radius: 31px;
+  border-bottom-left-radius: 31px;
+}
+
+.contact-us .contact-content .whats img {
+  width: 70px;
+  height: 75px;
+  position: relative;
 }
