@@ -1,8 +1,12 @@
 *,
-*::After,
+*::after,
 *::before {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 :root {
@@ -13,8 +17,8 @@
 body {
   direction: rtl;
   text-align: right;
-  background-color: #fbfbfb;
   font-family: 'Cairo', sans-serif;
+  background: #fbfbfb;
 }
 
 .column {
@@ -25,9 +29,6 @@ body {
   margin: 0 5px;
 }
 
-a {
-  text-decoration: none !important;
-}
 
 /* info nav */
 
@@ -74,25 +75,6 @@ nav.nav-info {
 
 .nav-content .list-inline a i {
   font-size: 19px;
-}
-
-.nav-content .new-create {
-  color: #fff;
-  position: relative;
-}
-
-.nav-content .new-create::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #fff;
-}
-
-.nav-content .enter-btn {
-  color: #dc9e35;
 }
 
 
@@ -165,18 +147,6 @@ nav.navbar .column {
   background-color: #e5e5e5
 }
 
-nav.navbar .donate-request {
-  background-color: #2d3e50;
-  width: 150px;
-  text-align: center;
-  border-radius: 11px;
-}
-
-nav.navbar .donate-request a {
-  color: #fff;
-  font-size: 18px;
-}
-
 /* breadcrumb */
 .my-breadcrumb {
   background-color: #fff;
@@ -190,7 +160,7 @@ nav.navbar .donate-request a {
   margin-bottom: 0 !important;
 }
 
-.my-breadcrumb ol li:first-child a {
+.my-breadcrumb ol li:not(:last-child) a {
   color: #c2c2c2;
 }
 
@@ -198,44 +168,62 @@ nav.navbar .donate-request a {
   color: #908f93;
 }
 
-/* form */
-
-form {
-  background-color: #fff;
+/* contact us */
+.call-us {
   border: 2px solid #eeeeee;
-  padding: 40px 0;
-  margin-bottom: 40px;
+  min-height: 440px;
+  background-color: #fff;
 }
 
-form input,
-form select {
-  width: 80% !important;
+.call-us h3.call-title {
+  background-color: var(--secColor);
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.call-us h2 {
+  color: var(--blood);
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+.call-us .phone,
+.call-us .fax,
+.call-us .email {
+  color: #565656;
+}
+
+.call-us h5 {
+  color: #e12226;
+  text-align: center;
+}
+
+.call-us .list-inline-item {
+  width: 40px;
+}
+
+form .form-control {
+  width: 95%;
   margin: auto;
-  background-color: #fbfbfb !important;
 }
 
-form .datepicker-container {
-  position: relative;
+form textarea {
+  resize: none;
 }
 
-form input.my-datepicker+i {
-  position: absolute;
-  left: 12%;
-  top: 30%;
-  font-size: 20px;
-}
-
-form .btn-create {
-  background-color: #3ab54a;
+form .btn {
+  display: block;
   color: #fff;
-  width: 200px;
-  padding: 10px 0;
-  font-size: 20px;
+  background-color: var(--secColor);
+  width: 95%;
+  margin: 0 auto 13px;
 }
 
-form .btn-create:hover {
-  color: #fff;
+form .btn:hover {
+  color: #fff !important;
 }
+
 
 /* footer */
 

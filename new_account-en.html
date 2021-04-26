@@ -29,8 +29,8 @@
       crossorigin="anonymous"
     />
     <link rel="icon" type="image/png" href="assets/imgs/Icon.png" />
-    <link rel="stylesheet" href="assets/sign_in-ar.css" />
-    <title>بنك الدم</title>
+    <link rel="stylesheet" href="assets/new_account-en.css" />
+    <title>Blood bank</title>
   </head>
   <body>
     <!-- info nav -->
@@ -38,9 +38,9 @@
       <div class="container">
         <div class="nav-content">
           <div class="translation">
-            <span><a href="sign_in-ar.html" class="arabic">عربى</a></span>
+            <span><a href="new_account-ar.html" class="arabic">عربى</a></span>
             <span class="column"></span>
-            <span><a href="#" class="english">EN</a></span>
+            <span><a href="new_account-en.html" class="english">EN</a></span>
           </div>
           <ul class="list-inline my-2 my-md-0">
             <li class="list-inline-item">
@@ -61,13 +61,11 @@
             </li>
           </ul>
           <div class="info d-flex justify-content-center align-items-center">
-            <div class="text-white pl-3">
-              <a href="new_account-ar.html" class="new-create"
-                >إنشاء حساب جديد</a
-              >
+            <div class="text-white pr-3">
+              <a href="new_account-en.html" class="new-create">A new account</a>
             </div>
             <div class="text-white">
-              <a href="sign_in-ar.html" class="btn enter-btn">الدخول</a>
+              <a href="sign_in-en.html" class="btn enter-btn">Sign in</a>
             </div>
           </div>
         </div>
@@ -78,7 +76,7 @@
       <div class="container">
         <a
           class="navbar-brand d-flex justify-content-center align-items-center"
-          href="index-ar.html"
+          href="index-en.html"
         >
           <img
             src="assets/imgs/Icon.png"
@@ -87,7 +85,7 @@
             class="d-inline-block align-top"
             alt=""
           />
-          <span class="mr-2">بنك الدم</span>
+          <span class="ml-2">Blood bank</span>
         </a>
         <button
           class="navbar-toggler"
@@ -102,33 +100,33 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0 mr-4">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mr-4">
             <li class="nav-item active">
-              <a class="nav-link" href="#">الرئيسية</a>
+              <a class="nav-link" href="#">Main</a>
             </li>
             <span class="column d-none d-md-inline"></span>
             <li class="nav-item">
-              <a class="nav-link" href="#about-the-bank">عن بنك الدم</a>
+              <a class="nav-link" href="#about-the-bank">About the bank</a>
             </li>
             <span class="column d-none d-md-inline"></span>
             <li class="nav-item">
-              <a class="nav-link" href="#articles">المقالات</a>
+              <a class="nav-link" href="#articles">Articles</a>
             </li>
             <span class="column d-none d-md-inline"></span>
             <li class="nav-item">
-              <a class="nav-link" href="#donate">طلبات التبرع</a>
+              <a class="nav-link" href="#donate">Donate</a>
             </li>
             <span class="column d-none d-md-inline"></span>
             <li class="nav-item">
-              <a class="nav-link" href="#contact-us">من نحن</a>
+              <a class="nav-link" href="#contact-us">About us</a>
             </li>
             <span class="column d-none d-md-inline"></span>
             <li class="nav-item">
-              <a class="nav-link" href="#contact-us">اتصل بنا</a>
+              <a class="nav-link" href="#contact-us">Call us</a>
             </li>
           </ul>
           <div class="my-2 my-lg-0 donate-request">
-            <a href="#" class="btn">طلب تبرع</a>
+            <a href="#" class="btn">Donate</a>
           </div>
         </div>
       </div>
@@ -138,11 +136,11 @@
       <nav class="my-breadcrumb">
         <ol>
           <li>
-            <a href="index-ar.html">الرئيسية</a>
+            <a href="index-en.html">Main</a>
           </li>
           <span class="mx-3">/</span>
           <li>
-            <a href="sign_in-ar.html">تسجيل الدخول</a>
+            <a href="new_account-en.html">A new account</a>
           </li>
         </ol>
       </nav>
@@ -150,47 +148,84 @@
     <!-- form -->
     <div class="container mt-5">
       <form>
-        <div
-          class="logo-container d-flex justify-content-center align-items-center mb-5"
-        >
-          <img src="assets/imgs/Icon.png" alt="" />
-          <h1>بنك الدم</h1>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            placeholder="Name"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control form-control-lg"
+            placeholder="E-mail"
+          />
+        </div>
+        <div class="form-group datepicker-container">
+          <input
+            type="text"
+            class="form-control my-datepicker form-control-lg"
+            placeholder="Date of birth"
+          />
+          <i class="fas fa-calendar-week"></i>
         </div>
         <div class="form-group">
           <input
             type="text"
             class="form-control form-control-lg"
-            placeholder="الجوال"
+            placeholder="Blood type"
+          />
+        </div>
+        <div class="form-group">
+          <select class="form-control form-control-lg">
+            <option>Governorate</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select class="form-control form-control-lg">
+            <option>City</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            placeholder="Phone number"
+          />
+        </div>
+        <div class="form-group datepicker-container">
+          <input
+            type="text"
+            class="form-control my-datepicker form-control-lg"
+            placeholder="Last donation date"
+          />
+          <i class="fas fa-calendar-week"></i>
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control form-control-lg"
+            placeholder="Password"
           />
         </div>
         <div class="form-group">
           <input
             type="password"
             class="form-control form-control-lg"
-            placeholder="كلمة المرور"
+            placeholder="Confirm password"
           />
         </div>
-        <div class="remember-container">
-          <div class="form-group form-check d-flex align-items-center">
-            <input
-              type="checkbox"
-              class="form-check-input"
-              id="exampleCheck1"
-            />
-            <label class="form-check-label mr-3" for="exampleCheck1"
-              >تذكرنى
-            </label>
-          </div>
-          <div>
-            <i class="fas fa-exclamation-triangle"></i>
-            <a href="#" class="password-forget"
-              ><span>هل نسيت كلمة المرور</span></a
-            >
-          </div>
-        </div>
         <div class="text-center">
-          <a href="#" class="btn btn-create">دخول</a>
-          <a href="#" class="btn btn-create mt-3 mt-md-0">إنشاء حساب جديد</a>
+          <a href="#" class="btn btn-create">Create</a>
         </div>
       </form>
     </div>
@@ -202,15 +237,15 @@
             <div class="media d-flex align-items-center">
               <img src="assets/imgs/Icon.png" class="img-fluid" alt="..." />
               <div class="media-body">
-                <h3 class="mt-0 mr-2 footer-title">بنك الدم</h3>
+                <h3 class="mt-0 ml-2 footer-title">Blood bank</h3>
               </div>
             </div>
-            <h5 class="my-3">بنك الدم</h5>
+            <h5 class="my-3">Blood bank</h5>
             <p class="footer-desc">
-              هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
-              هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو
-              العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
-              التطبيق
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi
+              autem quia debitis illum deleniti aperiam quibusdam natus
+              voluptatibus animi distinctio! Eligendi commodi aliquid nam
+              numquam?
             </p>
           </div>
           <div
@@ -218,27 +253,27 @@
           >
             <ul class="footer-list">
               <li class="active">
-                <a href="#">الرئيسية</a>
+                <a href="#">Main</a>
               </li>
               <li>
-                <a href="#">عن بنك الدم</a>
+                <a href="#">About the bank</a>
               </li>
               <li>
-                <a href="#">المقالات</a>
+                <a href="#">Articles</a>
               </li>
               <li>
-                <a href="#">طلبات التبرع</a>
+                <a href="#">Donate</a>
               </li>
               <li>
-                <a href="#">من نحن</a>
+                <a href="#">About us</a>
               </li>
               <li>
-                <a href="#">اتصل بنا</a>
+                <a href="#">Call us</a>
               </li>
             </ul>
           </div>
           <div class="col-12 col-md-4 available-sec">
-            <h5 class="available">متوفر على</h5>
+            <h5 class="available">available on</h5>
             <div class="my-3 my-md-0">
               <a href="#"><img src="assets/imgs/google1.png" alt="" /></a>
             </div>
@@ -275,7 +310,7 @@
           </li>
         </ul>
         <div class="copyright mx-auto">
-          جميع الحقوق محفوظة ل <a href="#">بنك الدم</a>&nbsp;&copy;2021
+          All right reserved to <a href="#">Blood bank</a>&nbsp;&copy;2021
         </div>
       </div>
     </section>
@@ -295,6 +330,7 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      $(".my-datepicker").datepicker();
       let navLinks = document.querySelectorAll(".navbar .nav-item");
 
       navLinks.forEach((navLink) => {

@@ -1,8 +1,12 @@
 *,
-*::After,
+*::after,
 *::before {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 :root {
@@ -11,10 +15,10 @@
 }
 
 body {
-  direction: rtl;
-  text-align: right;
-  background-color: #fbfbfb;
+  direction: ltr;
+  text-align: left;
   font-family: 'Cairo', sans-serif;
+  background: #fbfbfb;
 }
 
 .column {
@@ -25,9 +29,6 @@ body {
   margin: 0 5px;
 }
 
-a {
-  text-decoration: none !important;
-}
 
 /* info nav */
 
@@ -85,7 +86,7 @@ nav.nav-info {
   content: "";
   position: absolute;
   bottom: -3px;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 1px;
   background-color: #fff;
@@ -123,7 +124,7 @@ nav.navbar .sign-up::after {
   height: 2px;
   background-color: var(--blood);
   bottom: -5px;
-  left: 0;
+  right: 0;
   transform: scaleX(0);
   transform-origin: center;
   transition: 300ms;
@@ -151,7 +152,7 @@ nav.navbar .nav-item.active .nav-link::after {
   height: 2px;
   background-color: var(--blood);
   bottom: -28px;
-  left: 0;
+  right: 0;
 }
 
 @media (max-width: 767px) {
@@ -177,6 +178,9 @@ nav.navbar .donate-request a {
   font-size: 18px;
 }
 
+
+
+
 /* breadcrumb */
 .my-breadcrumb {
   background-color: #fff;
@@ -190,7 +194,7 @@ nav.navbar .donate-request a {
   margin-bottom: 0 !important;
 }
 
-.my-breadcrumb ol li:first-child a {
+.my-breadcrumb ol li:not(:last-child) a {
   color: #c2c2c2;
 }
 
@@ -198,44 +202,28 @@ nav.navbar .donate-request a {
   color: #908f93;
 }
 
-/* form */
+/* details */
 
-form {
+.details {
   background-color: #fff;
-  border: 2px solid #eeeeee;
-  padding: 40px 0;
-  margin-bottom: 40px;
+  border: 2px solid #eeee;
 }
 
-form input,
-form select {
-  width: 80% !important;
-  margin: auto;
-  background-color: #fbfbfb !important;
+.details h1 {
+  color: var(--blood);
 }
 
-form .datepicker-container {
-  position: relative;
+.details img {
+  width: 110px;
 }
 
-form input.my-datepicker+i {
-  position: absolute;
-  left: 12%;
-  top: 30%;
-  font-size: 20px;
+.details p {
+  padding: 0 20px;
+  line-height: 1.7;
+  color: #2e2e2e;
+  font-size: 18px;
 }
 
-form .btn-create {
-  background-color: #3ab54a;
-  color: #fff;
-  width: 200px;
-  padding: 10px 0;
-  font-size: 20px;
-}
-
-form .btn-create:hover {
-  color: #fff;
-}
 
 /* footer */
 

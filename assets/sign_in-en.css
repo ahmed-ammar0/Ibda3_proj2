@@ -11,8 +11,8 @@
 }
 
 body {
-  direction: rtl;
-  text-align: right;
+  direction: ltr;
+  text-align: left;
   background-color: #fbfbfb;
   font-family: 'Cairo', sans-serif;
 }
@@ -24,6 +24,7 @@ body {
   background-color: #4e759e;
   margin: 0 5px;
 }
+
 
 a {
   text-decoration: none !important;
@@ -85,7 +86,7 @@ nav.nav-info {
   content: "";
   position: absolute;
   bottom: -3px;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 1px;
   background-color: #fff;
@@ -123,7 +124,7 @@ nav.navbar .sign-up::after {
   height: 2px;
   background-color: var(--blood);
   bottom: -5px;
-  left: 0;
+  right: 0;
   transform: scaleX(0);
   transform-origin: center;
   transition: 300ms;
@@ -151,7 +152,7 @@ nav.navbar .nav-item.active .nav-link::after {
   height: 2px;
   background-color: var(--blood);
   bottom: -28px;
-  left: 0;
+  right: 0;
 }
 
 @media (max-width: 767px) {
@@ -177,6 +178,7 @@ nav.navbar .donate-request a {
   font-size: 18px;
 }
 
+
 /* breadcrumb */
 .my-breadcrumb {
   background-color: #fff;
@@ -198,6 +200,7 @@ nav.navbar .donate-request a {
   color: #908f93;
 }
 
+
 /* form */
 
 form {
@@ -207,28 +210,20 @@ form {
   margin-bottom: 40px;
 }
 
-form input,
-form select {
+form input:not([type="checkbox"]) {
   width: 80% !important;
   margin: auto;
   background-color: #fbfbfb !important;
 }
 
-form .datepicker-container {
-  position: relative;
-}
-
-form input.my-datepicker+i {
-  position: absolute;
-  left: 12%;
-  top: 30%;
-  font-size: 20px;
+form .logo-container img {
+  width: 115px;
 }
 
 form .btn-create {
   background-color: #3ab54a;
   color: #fff;
-  width: 200px;
+  width: 300px;
   padding: 10px 0;
   font-size: 20px;
 }
@@ -236,6 +231,22 @@ form .btn-create {
 form .btn-create:hover {
   color: #fff;
 }
+
+form .remember-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+form .remember-container i {
+  color: #ffa601
+}
+
+form .password-forget {
+  color: #000;
+}
+
 
 /* footer */
 

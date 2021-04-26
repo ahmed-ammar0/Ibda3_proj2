@@ -1,8 +1,12 @@
 *,
-*::After,
+*::after,
 *::before {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 :root {
@@ -13,7 +17,7 @@
 body {
   direction: rtl;
   text-align: right;
-  background-color: #fbfbfb;
+  background: #fbfbfb;
   font-family: 'Cairo', sans-serif;
 }
 
@@ -25,9 +29,6 @@ body {
   margin: 0 5px;
 }
 
-a {
-  text-decoration: none !important;
-}
 
 /* info nav */
 
@@ -76,27 +77,9 @@ nav.nav-info {
   font-size: 19px;
 }
 
-.nav-content .new-create {
-  color: #fff;
-  position: relative;
-}
-
-.nav-content .new-create::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #fff;
-}
-
-.nav-content .enter-btn {
-  color: #dc9e35;
-}
-
 
 /* navbar  */
+
 nav.navbar {
   background-color: #f9f9f9;
   box-shadow: 0 4px 20px rgb(0 0 0 / 20%)
@@ -165,18 +148,6 @@ nav.navbar .column {
   background-color: #e5e5e5
 }
 
-nav.navbar .donate-request {
-  background-color: #2d3e50;
-  width: 150px;
-  text-align: center;
-  border-radius: 11px;
-}
-
-nav.navbar .donate-request a {
-  color: #fff;
-  font-size: 18px;
-}
-
 /* breadcrumb */
 .my-breadcrumb {
   background-color: #fff;
@@ -190,7 +161,7 @@ nav.navbar .donate-request a {
   margin-bottom: 0 !important;
 }
 
-.my-breadcrumb ol li:first-child a {
+.my-breadcrumb ol li:not(:last-child) a {
   color: #c2c2c2;
 }
 
@@ -198,44 +169,113 @@ nav.navbar .donate-request a {
   color: #908f93;
 }
 
-/* form */
+/* image section */
+.img-section {
+  width: 75%;
+  margin: auto;
+  display: block;
+  margin-top: 40px;
+}
 
-form {
+/* protection section */
+.protect-content {
+  margin-top: 30px;
+  background-color: var(--secColor);
+  padding: 20px 15px;
+}
+
+.protect-content h2 {
+  color: #c5c9ce;
+}
+
+.protect-content i {
+  color: #c5c9ce;
+  font-size: 50px;
+}
+
+.desc-content {
+  margin-top: 30px;
   background-color: #fff;
   border: 2px solid #eeeeee;
-  padding: 40px 0;
-  margin-bottom: 40px;
 }
 
-form input,
-form select {
-  width: 80% !important;
-  margin: auto;
-  background-color: #fbfbfb !important;
+.desc-content p {
+  padding: 15px;
+  line-height: 1.9;
+  color: #929292;
+  font-size: 18px;
+  text-align: right;
 }
 
-form .datepicker-container {
+@media (max-width: 767px) {
+  .desc-content p {
+    text-align: justify;
+  }
+}
+
+
+/* nice carousel */
+
+
+.articles-title {
+  color: var(--blood);
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.articles-title::after {
+  position: absolute;
+  content: "";
+  width: 190px;
+  height: 3px;
+  background-color: var(--blood);
+  bottom: -10px;
+  right: 0;
+}
+
+.nice-carousel .card {
+  border: none !important;
   position: relative;
 }
 
-form input.my-datepicker+i {
+.nice-carousel .card i {
   position: absolute;
-  left: 12%;
-  top: 30%;
-  font-size: 20px;
+  background-color: var(--secColor);
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  left: 0.5rem;
+  top: 0.5rem;
+  cursor: pointer;
 }
 
-form .btn-create {
-  background-color: #3ab54a;
-  color: #fff;
-  width: 200px;
-  padding: 10px 0;
-  font-size: 20px;
+.nice-carousel .card .card-title {
+  color: var(--blood);
 }
 
-form .btn-create:hover {
+.nice-carousel .card .btn-details {
+  background-color: var(--secColor);
   color: #fff;
+  padding: 5px 30px;
 }
+
+.owl-nav {
+  position: absolute;
+  top: -102px;
+  left: 0;
+  font-size: 45px;
+  color: #a4abae;
+  ;
+}
+
+.owl-nav .owl-prev {
+  margin-left: 10px;
+}
+
 
 /* footer */
 

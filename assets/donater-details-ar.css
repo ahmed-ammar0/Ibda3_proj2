@@ -1,8 +1,12 @@
 *,
-*::After,
+*::after,
 *::before {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 :root {
@@ -13,8 +17,8 @@
 body {
   direction: rtl;
   text-align: right;
-  background-color: #fbfbfb;
   font-family: 'Cairo', sans-serif;
+  background: #fbfbfb;
 }
 
 .column {
@@ -25,9 +29,6 @@ body {
   margin: 0 5px;
 }
 
-a {
-  text-decoration: none !important;
-}
 
 /* info nav */
 
@@ -76,27 +77,9 @@ nav.nav-info {
   font-size: 19px;
 }
 
-.nav-content .new-create {
-  color: #fff;
-  position: relative;
-}
-
-.nav-content .new-create::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #fff;
-}
-
-.nav-content .enter-btn {
-  color: #dc9e35;
-}
-
 
 /* navbar  */
+
 nav.navbar {
   background-color: #f9f9f9;
   box-shadow: 0 4px 20px rgb(0 0 0 / 20%)
@@ -165,18 +148,6 @@ nav.navbar .column {
   background-color: #e5e5e5
 }
 
-nav.navbar .donate-request {
-  background-color: #2d3e50;
-  width: 150px;
-  text-align: center;
-  border-radius: 11px;
-}
-
-nav.navbar .donate-request a {
-  color: #fff;
-  font-size: 18px;
-}
-
 /* breadcrumb */
 .my-breadcrumb {
   background-color: #fff;
@@ -190,7 +161,7 @@ nav.navbar .donate-request a {
   margin-bottom: 0 !important;
 }
 
-.my-breadcrumb ol li:first-child a {
+.my-breadcrumb ol li:not(:last-child) a {
   color: #c2c2c2;
 }
 
@@ -198,44 +169,48 @@ nav.navbar .donate-request a {
   color: #908f93;
 }
 
-/* form */
+/* details */
 
-form {
+.details {
   background-color: #fff;
-  border: 2px solid #eeeeee;
-  padding: 40px 0;
-  margin-bottom: 40px;
+  padding: 20px 30px;
+  border: 2px solid #eee;
 }
 
-form input,
-form select {
-  width: 80% !important;
-  margin: auto;
-  background-color: #fbfbfb !important;
+.details .col-12 .row {
+  margin-left: 0 !important;
 }
 
-form .datepicker-container {
-  position: relative;
+.details .sub-col {
+  padding: 20px 10px;
+  font-size: 18px;
 }
 
-form input.my-datepicker+i {
-  position: absolute;
-  left: 12%;
-  top: 30%;
-  font-size: 20px;
+.details .sub-col:nth-of-type(odd) {
+  background-color: #f4f4f4;
 }
 
-form .btn-create {
-  background-color: #3ab54a;
-  color: #fff;
+.details .sub-col:nth-of-type(even) {
+  background-color: #fafafa;
+}
+
+.details button {
   width: 200px;
+  outline: none;
+  border: none;
+  background-color: var(--secColor);
+  color: #fff;
   padding: 10px 0;
-  font-size: 20px;
 }
 
-form .btn-create:hover {
-  color: #fff;
+.details p {
+  line-height: 1.8;
+  font-size: 18px;
+  color: #919191;
+  border: 2px solid #eee;
+  padding: 15px;
 }
+
 
 /* footer */
 
